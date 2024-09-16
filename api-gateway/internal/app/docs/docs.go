@@ -1331,7 +1331,7 @@ const docTemplate = `{
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
 	Version:          "1.0",
-	Host:             "localhost:9006",
+	Host:             "3.127.221.197:9006",
 	BasePath:         "/",
 	Schemes:          []string{"https"},
 	Title:            "Artisan Connect",
