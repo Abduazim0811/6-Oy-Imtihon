@@ -2,12 +2,13 @@ name: Build, Push and Deploy Docker Image
 
 on:
   push:
-    branches:
-      - unknwon17
+    branches: [ "unknown17" ]
+  pull_request:
+    branches: [ "unknown17" ]
 
 env:
   SERVER_USERNAME: ubuntu
-  SERVER_IP: 53.127.221.197
+  SERVER_IP: 3.127.221.197
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
 jobs:
