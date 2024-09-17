@@ -22,7 +22,7 @@ func NewUserServer(user userusecase.User) *UserServer {
 // @title Artisan Connect
 // @version 1.0
 // @description This is a sample server for a restaurant reservation system.
-// @host 3.127.221.197:9006
+// @host localhost:9006
 // @BasePath        /
 // @schemes         https
 // @securityDefinitions.apiKey ApiKeyAuth

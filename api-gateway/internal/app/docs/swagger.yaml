@@ -225,7 +225,7 @@ definitions:
       secret_code:
         type: string
     type: object
-host: 3.127.221.197:9006
+host: localhost:9006
 info:
   contact: {}
   description: This is a sample server for a restaurant reservation system.
