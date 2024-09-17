@@ -2,13 +2,12 @@ name: Build, Push and Deploy Docker Image
 
 on:
   push:
-    branches: [ "unknown17" ]
-  pull_request:
-    branches: [ "unknown17" ]
+    branches:
+      - unknwon17
 
 env:
   SERVER_USERNAME: ubuntu
-  SERVER_IP: 3.127.221.197
+  SERVER_IP: 53.127.221.197
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
 jobs:
@@ -25,17 +24,12 @@ jobs:
           username: ${{ env.SERVER_USERNAME }}
           key: ${{ env.SSH_PRIVATE_KEY }}
           script: |
-            if [ ! -d "go2/src" ]; then
-              mkdir -p go2/src
+            if [ ! -d "imtihon-6/lesson_ci_cd" ]; then
+              git clone https://github.com/unknownn17/6-Oy-Imtihon.git imtihon-6/lesson_ci_cd
             fi
-            
-            if [ ! -d "go2/src/tasks" ]; then
-              git clone https://github.com/unknownn17/6-Oy-Imtihon.git go2/src/tasks
-            fi
-            
-            cd go2/src/tasks
-            
-            sudo docker compose down
-            sudo docker compose up --build -d
+            cd imtihon-6/lesson_ci_cd/
+            git pull origin unknown17
+            docker compose down
+            docker compose up --build -d
           script_stop: true
           timeout: 200s
